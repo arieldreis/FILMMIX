@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="shortcut icon" href="4831203.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Grey+Qo&family=Kaushan+Script&family=Permanent+Marker&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        body {
+            background-image: url('tela_filmes.jpg');
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Fira Sans', Times, serif;
+        }
+        button {
+            color: white;
+            background-color: #ff0000;
+            width: 150px;
+            margin: 30px 0;
+            cursor: pointer;
+            border-radius: 4px;
+            border: none;
+            box-shadow: 1px 1px 1px 1px black;
+            height: 5vh;
+        }
+        button:hover{
+            background-color: #ff0000e1;
+
+        }
+        form {
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.75); /* Fundo escuro e translúcido */ 
+            padding: 20px;
+            border: 1px solid black;
+            width: 300px;
+            height: auto;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        #nada {
+            margin: 0 10px;
+            font-size: 30px;
+            
+        }
+        #sem_conta:hover{
+            color: #ff0000;
+        }
+        #sublinhado:hover{
+            color: #ff0000;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="color:rgb(255, 3, 3); font-size: 3em; font-family: Arial, Helvetica, sans-serif; position: absolute; top: 10px;text-shadow: 1px 2px black;"><strong>FILM MIX</strong></h2>
+    <form onsubmit="dados(event)">
+        <label type="text" id="nada"><strong>LOGIN</strong></label>
+        <br>
+        <input type="email" placeholder="Usuário..." id="usuario" name="fname" style="border: none; width: 300px; height: 30px; margin-bottom: 10px; border-radius: 4px;" required><br>
+        <input type="password" placeholder="Senha..." id="senha" name="lname" style="border: none; width: 300px; height: 30px; margin-bottom: 10px; border-radius: 4px; box-shadow: 1px 1px 1px 1px black;" required>
+        <br>
+        <button type="submit" value="Submit" onclick="dados()">ENVIAR</button>
+        <br>
+        <div id="acesso">
+            
+        </div>
+            <a id="sublinhado" href="sem_conta.html" style="color: white; padding: 5px 0; text-decoration: none;">Não tenho uma conta | <a href="esqueci_senha.html" style="color: white; padding: 5px 0; text-decoration: none;">Esqueci Senha</a></a>
+    </form>
+    <script>
+        function dados(event){
+            event.preventDefault();
+            let usuario1 = document.getElementById('usuario').value;
+            let senha1 = document.getElementById('senha').value; 
+            let acesso = document.getElementById('acesso');
+            if(usuario1 === 'arieldreis@gmail.com' && senha1 === 'Ariel2805.a'){
+                window.location.href = 'filmmix.html'
+            }else{
+                acesso.innerHTML = '<p style="color: red;">Acesso Negado!!!</p>'
+            }
+        }
+    </script>
+</body>
+</html>

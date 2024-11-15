@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suporte da Film Mix</title>
+    <link rel="shortcut icon" href="4831203.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Grey+Qo&family=Kaushan+Script&family=Permanent+Marker&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+        body{
+            background-color: #1b1a1a;
+            font-family: 'Fira Sans', Times, serif;
+            margin: 0;
+        }
+        h1 , p{
+            color: #ffffff;
+            margin: 10px;
+            text-align: center;
+        }
+        label{
+            color: #ffffff;
+            text-align: left;
+            margin-bottom: 5px;
+        }
+        nav, a {
+            text-decoration: none;
+            color: white;
+            text-align: center;
+            margin: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a:hover{
+            color: red;
+        }
+        header, footer {
+            background-color: rgb(82, 76, 76);
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .search-container {
+            display: flex;
+            align-items: center;
+            margin:10px;
+            justify-content: flex-start;
+        }
+        .search-container form {
+            display: flex;
+            align-items: center;
+        }
+        .search-container input[type="text"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3.6px;
+            width: 175px;
+            height: 2.8vh;
+        }
+        .search-container button {
+            padding: 5px 10px;
+            border: none;
+            border-radius: 3px;
+            margin-left: 5px;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+            height: 3.6vh;
+        }
+        .search-container button:hover {
+            background-color: #777;
+        }
+        .demo{
+            text-align: left;
+            margin: 0 10px;
+        }
+        form{
+            margin: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+        }
+        input{
+            border-radius: 4px;
+            border: none;
+            box-shadow: 1px 1px 1px 1px #000000;
+            margin-bottom: 10px;
+            width: 400px;
+            height: 4vh;
+            font-family: 'Fira Sans', Times, serif;
+        }
+        textarea{
+            box-shadow: 1px 1px 1px 1px black;
+            height: 15vh;
+            width: 400px;
+            border-radius: 4px;
+            margin-bottom: 5px;
+            font-family: 'Fira Sans', Times, serif;
+        } h2{
+            color: #ffffff;
+        }
+        .alinhamento{
+            text-align: left;
+            background-color: #2C2C2C;
+            height: 70vh;
+            width: 440px;
+            padding: 0 30px;
+            border-radius: 5px;
+            justify-content: center;
+        }
+        #centro{
+            text-align: center;
+        }
+        button{
+            background-color: red;
+            color:#ffffff;
+            border-radius: 4px;
+            width: 100px;
+            height: 5vh;
+            cursor: pointer;
+        }
+        button:hover{
+            background-color: #ff0000de;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <p style="color:rgb(194, 27, 27); text-align: center; font-size: 1.5em;"><strong>FILM MIX</strong></p>
+            <a href="filmmix.html">Início</a>
+            <a href="#Filmes">Filmes</a>
+            <a href="#Séries">Séries</a>
+            <a href="#Lançamento">Lançamento</a>
+            <a href="#categora">Categoria</a>
+        </nav>
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="text" placeholder="Buscar Filmes...." name="query">
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+    </header>
+    <h1>Entre em contato</h1>
+    <p>Mande a sua avaliação referente ao nosso site, contamos com a sua ajuda.</p>
+    <form action="https://formspree.io/f/mnnazeag" method="post">
+        <div class="alinhamento">
+            <h2 id="centro">CONTATO</h2>
+            <label for="nada">Nome completo:</label><br>
+            <input type="text" placeholder="Digite..." required><br>
+            <label for="nothing">Telefone:</label><br>
+            <input type="tel" name="telefone" id="telefone" placeholder="Digite..." required><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" name="email" id="email" placeholder="Digite..." required><br>
+            <label for="mensagem">feedback:</label><br>
+            <textarea name="mensagem" placeholder="Digite o seu feedback..." required></textarea>
+            <button type="submit">ENVIAR</button>
+        </div>
+    </form>
+    <footer>
+        <hr>
+        <p>Contato:<strong><a href="mailto:arieldreis@gmail.com">arieldreis@gmail.com</a></strong></p>
+        <p>Política | Termo de Uso</p>
+        <p>&copy;2024 Film Mix. Todos os direitos distribuídos por Film Mix</p>
+        <div>
+            <p style="text-align: left;"><strong>SOBRE NÓS</strong></p>
+            <p style="text-align: left;">A Film Mix será um dos melhores sites de filmes. <br>Aqui temos desde romance, <br>ação até terror, suspense e documentário.</p>
+        </div>
+        <hr/>
+    </footer>
+</body>
+</html>
