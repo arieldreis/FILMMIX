@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Os Estranhos Capítulo 1 - Assistir Online</title>
+    <link rel="shortcut icon" href="4831203.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;600;700&display=swap');
+
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(27, 26, 26);
+            font-family: 'Fira Sans', sans-serif;
+            color: white;
+            margin: 0;
+        }
+
+        header, footer {
+            background-color: rgb(82, 76, 76);
+            color: white;
+            text-align: center;
+            padding: 20px 10px;
+            width: 100%;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 15px;
+            font-size: 1.1em;
+        }
+
+        nav a:hover {
+            color: red;
+        }
+
+        .search-container {
+            margin: 10px auto;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .search-container input[type="text"] {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 300px;
+            height: 5vh;
+        }
+
+        .search-container button {
+            padding: 10px 20px;
+            margin-left: 5px;
+            background-color: #555;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 2s;
+        }
+
+        .search-container button:hover {
+            background-color: red;
+        }
+
+        video {
+            width: 100%;
+            max-width: 800px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 10px;
+        }
+
+        .alinha_img_texto {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            /* flex-wrap: wrap; */
+            justify-content: center;
+        }
+
+        .alinha_img_texto img {
+            border-radius: 10px;
+        }
+
+        .detalhes_filme h2 {
+            color: rgb(61, 61, 182);
+        }
+
+        .detalhes_filme button {
+            background-color: red;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 0px;
+            transition: 2s;
+        }
+
+        .detalhes_filme button:hover {
+            background-color: rgb(150, 0, 0);
+            transform: scale(1.3);
+        }
+
+        footer {
+            margin-top: 30px;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+
+        footer a {
+            color: white;
+            text-decoration: underline;
+        }
+
+        footer a:hover {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header>
+        <nav>
+            <p style="color: rgb(194, 27, 27); font-size: 1.5em;"><strong>FILM MIX</strong></p>
+            <a href="filmmix.html">Início</a>
+            <a href="#Filmes">Filmes</a>
+            <a href="#Séries">Séries</a>
+            <a href="#Lançamento">Lançamento</a>
+        </nav>
+        <div class="search-container">
+            <form action="/search" method="GET">
+                <input type="search" placeholder="Buscar Filmes..." name="query">
+                <button type="submit" onclick="busca()">Buscar</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Player de vídeo -->
+    <video controls autoplay>
+        <source src="o" type="video/mp4">
+        <source src="The.Strangers.Chapter.1.2024.ogg" type="video/ogg">
+        <track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" default>
+        Seu navegador não suporta o vídeo. Por favor, atualize para assistir ao filme.
+    </video>
+
+    <!-- Detalhes do filme -->
+    <div class="alinha_img_texto">
+        <img src="terror/osestranhos.jpg" alt="Os Estranhos - Pôster" width="200" height="300">
+        <div class="detalhes_filme">
+            <h2>IMDB: 7,0 / 10</h2>
+            <h2>Assistir Estranhos: Capítulo 1 Online</h2>
+            <p>Lançamento: <strong>16 de Maio de 2024</strong></p>
+            <p>Gênero: Terror / Suspense</p>
+            <div>
+                <button onclick="alert('Filme adicionado à lista!')">Ação</button>
+                <button onclick="alert('Filme adicionado à lista!')">Crime</button>
+                <button onclick="mudanca_elemento()">Sinopse</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rodapé -->
+    <footer>
+        <p>Contato: <strong><a href="mailto:arieldreis@gmail.com">arieldreis@gmail.com</a></strong></p>
+        <p><a href="#">Política</a> | <a href="#">Termos de Uso</a></p>
+        <p>&copy; 2024 Film Mix. Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        function mudanca_elemento() {
+            const detalhes = document.querySelector(".detalhes_filme");
+            detalhes.innerHTML += `
+                <h2>Sinopse</h2>
+                <p>Estranhos Capítulo 1 é um filme de terror americano de 2024. A trama acompanha uma família psicopata que encontra prazer em perseguir e matar desconhecidos. Um filme cheio de suspense e terror psicológico.</p>
+            `;
+        }
+        function busca(){
+
+        }
+    </script>
+</body>
+</html>
