@@ -269,6 +269,10 @@ option {
         gap: 10px;
         padding: 10px;
     }
+    .search-container{
+        display: flex;
+        justify-content: center;
+    }
 }
 #menu_navegacao{
     background-color: #000000a2;
