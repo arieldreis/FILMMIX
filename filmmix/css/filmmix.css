@@ -34,6 +34,7 @@ body {
 a:hover {
     color: var(--cor4);
     transition: 0.5s;
+    border-radius: 5px;
 }
 
 header,footer {
@@ -46,7 +47,7 @@ header,footer {
 ul a{
     padding: 8px;
 }
-ul{
+ul#menu_links{
     font-size: 0.9em;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -56,6 +57,7 @@ ul{
     gap: 3%;
     margin-top: 20px;
     justify-content: center; /* Centraliza quando quebrar */
+    border-radius: 5px;
 }
 .nav-bar {
     display: flex;
@@ -280,32 +282,31 @@ option {
     border-radius: 4px;
 }
 @media screen and (max-width: 600px){
-    #menu_links{
-        display: none; /*Esconde os links*/
-        flex-direction: column;
-        gap: 10px;
-        background-color: var(--cor3);
-        padding: 10px;
-        border-radius: 5px;
-    }
+    #menu_links {
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--cor3);
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+  }
     #menu_links.show{
-        display: flex;
+        display: flex; /* Mostra quando clicar no botão */
     }
     /*Pagina de busca dos filmes*/
     .search-container{
         display: flex;
         justify-content: center;
     }
-    #menu_navegacao{
-        display: block;
-        background-color: none;
-        border: none;
-        font-size: 24px;
-        cursor: pointer;
-        margin-left: auto; /*Centraliza o botão*/
-        margin-right: auto; /*Centraliza o botão*/
-
-    }
+    #menu_navegacao {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+  }
     .menu-mobile-link{
         background-color: var(--cor3);
         text-align: left;
@@ -314,8 +315,11 @@ option {
         width: 100%;
         color: var(--cor1);
     }
-    .menu-mobile-link:hover{
+    .menu-mobile-link > a:hover{
         background-color: var(--cor4);
+        color: var(--cor2);
+        text-decoration: underline;
+        width: 100%;
     }
 }
 #menu_navegacao{
