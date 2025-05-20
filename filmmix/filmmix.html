@@ -6,33 +6,22 @@
     <title>FilmMix</title>
     <link rel="shortcut icon" href="4831203.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/filmmix.css">
-    <script src="script/filmmix.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=menu">
 </head>
 <body>
     <header>
         <h1 class="logo"><strong>FILM MIX</strong></h1>
-        <div class="cores">
-            <button class="material-symbols-outlined" id="menu_navegacao" onclick="clicar_menu()">menu</button>
-            <nav>
-                <a href="#Início">Início</a>
-                <a href="#Filmes">Filmes</a>
-                <a href="#Series">Séries</a>
-                <select name="names" id="names" aria-placeholder="Categorias" onchange="pagina_nova(this)">
-                    <option value="suspense.html"><a href="suspense.html">Suspense</a></option>
-                    <option value="terror.html">Terror</option>
-                    <option value="acao">Ação</option>
-                    <option value="comedia">Comédia</option>
-                    <option value="drama">Drama</option>
-                    <option value="documentario">Documentário</option>
-                    <option value="Animes">Animes</option>
-                    <option value="brasileiros">Filmes Brasileiros</option>
-                    <option value="ficcao">Ficção</option>
-                    <option value="romance">Romance</option>
-                    <option value="Desenhos">Desenhos</option>
-                </select>
-                <a href="#Lançamento">Lançamento</a>
-                <a href="contato.html">Contato</a>
+        <div>
+            <nav class="navigation">
+                <button class="material-symbols-outlined" id="menu_navegacao" onclick="clicar_menu()"></button>
+                <ul id="menu_links">
+                    <li class="menu-mobile-link"><a href="#Início">Início</a></li>
+                    <li class="menu-mobile-link"><a href="#Filmes">Filmes</a></li>
+                    <li class="menu-mobile-link"><a href="#Series">Séries</a></li>
+                    <li class="menu-mobile-link"><a href="#generos">Gêneros</a></li>
+                    <li class="menu-mobile-link"><a href="#Lançamento">Lançamento</a></li>
+                    <li class="menu-mobile-link"><a href="contato.html">Contato</a></li>
+                </ul>
             </nav>
         </div>
         
@@ -44,7 +33,7 @@
         </div>
     </header>
     <h1 id="cor_borda">Pessoal, nosso Instagram está ativo. Vamos sempre colocar um endereço de um site nosso que esteja desbloqueado, siga a gente e compartilhe.</h1>
-    <h1 style="font-size:20px; background-color: red; color:white;text-align: left">Lançamento</h1>
+    <h1 class="typeMovies-Series">Lançamento</h1>
     <div style="background-color: #777;">
         <div class="demo">
             <div>
@@ -77,7 +66,7 @@
             </div>
         </div>
     </div>
-    <h1 style="background-color: red; color:white; text-align: left;">Séries</h1>
+    <h1 class="typeMovies-Series">Séries</h1>
     <div class="nova_linha">
         <div>
             <img src="MV5BY2FmZTY5YTktOWRlYy00NmIyLWE0ZmQtZDg2YjlmMzczZDZiXkEyXkFqcGdeQXVyNjg4NzAyOTA@._V1_FMjpg_UX1000_.jpg" alt="The Big Bang Theory" width="170" height="250">
@@ -108,7 +97,7 @@
             <button onclick="redirecionar('peacemaker.html')">O PACIFICADOR</button>
         </div>
     </div>
-    <h1 style="color: white; text-align: left;"><strong>Filmes de Ação</strong></h1>
+    <h1 class="typeMovies-Series">Filmes de Ação</h1>
     <div class="filmes_acao">
         <div>
             <img src="5026941.jpg" alt="Infiltrado o filme">
@@ -139,7 +128,7 @@
             <button onclick="redirecionar('007_filme.html')">007</button>
         </div>
     </div>
-    <h1 style="color: white; background-color: red; text-align: left;">Marvel</h1>
+    <h1 class="typeMovies-Series">Marvel</h1>
     <div class="marvel_filmes">
         <div>
             <img src="1382589.jpg" alt="Doutor Estranho: No Multiverso da Loucura">
@@ -182,5 +171,6 @@
         </div>
         <hr/>
     </footer>
+    <script src="script/filmmix.js"></script>
 </body>
 </html>
