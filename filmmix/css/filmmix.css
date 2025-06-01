@@ -10,6 +10,7 @@
     --cor7: #008000;
     --cor8: #000000;
     --cor9: #777;
+    --cor10: #6c6a6a;
 }
 body {
     background-color: var(--cor1);
@@ -281,45 +282,45 @@ option {
     cursor: pointer;
     border-radius: 4px;
 }
-@media screen and (max-width: 600px){
-    #menu_links {
-    flex-direction: column;
-    gap: 10px;
-    background-color: var(--cor3);
-    padding: 10px;
-    border-radius: 5px;
-    display: none;
-  }
-    #menu_links.show{
-        display: flex; /* Mostra quando clicar no botão */
+@media (max-width: 768px) {
+    /*Configuração dos links*/
+    #menu_links{
+        display: none; /*Esconde os links*/
+        flex-direction: column;
+        gap: 10px;
+        background-color: var(--header);
+        padding: 10px;
+        border-radius: 5px;
     }
-    /*Pagina de busca dos filmes*/
-    .search-container{
-        display: flex;
-        justify-content: center;
+    #menu_links.show{
+        display: flex; /* Mostra quando tiver a classe .show */
     }
     #menu_navegacao {
-    display: block;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    margin-left: auto;
-    margin-right: auto;
-  }
-    .menu-mobile-link{
-        background-color: var(--cor3);
-        text-align: left;
-        padding: 20px;
-        transition: 0.5 ease-in;
-        width: 100%;
-        color: var(--cor1);
+        display: block;
+        background-color: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        margin-left: auto; /*Centraliza o botão*/
+        margin-right: auto; /*Centraliza o botão*/
     }
-    .menu-mobile-link > a:hover{
+    .menu-mobile-link{
+        background-color: var(--cor10);
+        text-align: left;
+        padding: 15px;
+        transition: 0.5 ease-in;
+        width: 90%;
+        color: var(--cor1);
+        border-radius: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .menu-mobile-link > a{
+        border-radius: 10px;
+    }
+    .menu-mobile-link:hover > a{
         background-color: var(--cor4);
-        color: var(--cor2);
-        text-decoration: underline;
-        width: 100%;
+        color:  var(--cor2);
     }
 }
 #menu_navegacao{
