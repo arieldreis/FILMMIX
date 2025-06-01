@@ -258,29 +258,10 @@ button:hover {
     color: var(--cor4);
     text-decoration: underline;
 }
-
-select {
-    background-color: var(--cor6);
-    color: white;
-    font-family: 'Fira Sans', Helvetica, sans-serif;
-    border-radius: 4px;
-    border: none;
-    width: 200px;
-    height: 5vh;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    cursor: pointer;
-}
-
-select:hover {
-    background-color: #ff0000f1;
-}
-
-option {
-    background-color: var(--cor6);
-    cursor: pointer;
-    border-radius: 4px;
+#menu_navegacao{
+    display: none;
+    background-color: #000000a2;
+    box-shadow: 1px 1px 1px 1px #0000005e;
 }
 @media (max-width: 768px) {
     /*Configuração dos links*/
@@ -322,11 +303,10 @@ option {
         background-color: var(--cor4);
         color:  var(--cor2);
     }
-}
-#menu_navegacao{
-    display: none;
-    background-color: #000000a2;
-    box-shadow: 1px 1px 1px 1px #0000005e;
+    .search-container{
+        display: flex;
+        justify-content: center;
+    }
 }
 .typeMovies-Series{
     font-size: 1.5em;
