@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url('fundo-filmix.jpg'); /* substitua por sua imagem real de fundo */
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background-color: rgba(0, 0, 0, 0.85);
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #00ff88;
+}
+
+.logo {
+  color: #e50914;
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.btn {
+  padding: 12px 25px;
+  background-color: #e50914;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #b00610;
+}
