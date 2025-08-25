@@ -9,23 +9,51 @@
 </head>
 <body>
     <h1>FILMMIX</h1>
-    <form method="post" action="/createAccount" onsubmit="">
+    <form method="post" action="http://localhost:3050/createAccount" onsubmit="creat_account(event)" class="formAccount">
         <div class="cor_fundo">
             <h2>CRIAR CONTA</h2>
             <label for="usuario">Usuario:</label><br>
-            <input type="text" name="fname" id="fname" placeholder="Digite o nome do usuário que deseja criar..." required><br>
+            <input type="text" name="name" id="idname" placeholder="Digite o nome do usuário que deseja criar..."><br>
             <label for="senha">Senha:</label><br>
-            <input type="password" name="lname" id="lname" placeholder="Digite a senha da sua preferência..." required><br>
+            <input type="password" name="senhaname" id="senhaid" placeholder="Digite a senha da sua preferência..."><br>
             <label for="cadastro_pessoas">Digite o cpf: </label><br>
-            <input type="text" name="cpf" id="" placeholder="Digite o número do seu cpf..." required><br>
+            <input type="text" name="cpfname" id="cpfid" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00"><br>
+            <small>Formato: 000.000.000-00</small><br>
             <label for="email">E-mail</label><br>
-            <input type="email" name="email" id="emial" placeholder="Digite o seu e-mail..." required><br>
+            <input type="email" name="emailname" id="emailid" placeholder="Digite o seu e-mail..."><br>
             <label for="nivel">Data de Nascimento:</label><br>
-            <input type="date" name="nascimento" id="" placeholder="Digite..." required><br>
-            <label for="cidade">Cidade:</label><br>
-            <input type="text" name="cidade" id="cidade" placeholder="Digite o nome da sua cidade..."><br>
+            <input type="date" name="nascimentoname" id="nascimentonameid" placeholder="Digite..."><br>
             <label for="estado">Estado:</label><br>
-            <input type="text" name="estado" id="estado" placeholder="Digite o nome da sua cidade...">
+            <select name="estadosname" id="estadosid">
+                <option value="Acre">Acre</option>
+                <option value="Alagoas">Alagoas</option>
+                <option value="Amapá">Amapá</option>
+                <option value="Amazonas">Amazonas</option>
+                <option value="Bahia">Bahia</option>
+                <option value="Ceará">Ceará</option>
+                <option value="Espírito Santo">Espírito Santo</option>
+                <option value="Goiás">Goiás</option>
+                <option value="Maranhão">Maranhão</option>
+                <option value="Mato Grosso">Mato Grosso</option>
+                <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                <option value="Minas Gerais">Minas Gerais</option>
+                <option value="Pará">Pará</option>
+                <option value="Paraíba">Paraíba</option>
+                <option value="Paraná">Paraná</option>
+                <option value="Pernanbuco">Pernanbuco</option>
+                <option value="Piauí">Piauí</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                <option value="Rondônia">Rondônia</option>
+                <option value="Roraima">Roraima</option>
+                <option value="Santa Catarina">Santa Catarina</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Sergipe">Sergipe</option>
+                <option value="Tocantins">Tocantins</option>
+                <option value="Distrito Federal">Distrito Federal</option>
+            </select>
+            <div class="align"></div>
             <button type="submit">ENVIAR</button>
         </div>
     </form>
