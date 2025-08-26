@@ -99,85 +99,23 @@ ul a {
     background-color: var(--cor6);
     color: var(--cor2);
     cursor: pointer;
+    box-shadow: black 1px 1px 1px 1px;
+    transition: 0.8s;
+    font-family: var(--fonte);
 }
 .search-container button:hover {
     background-color: var(--cor9);
-}
-
-/* Títulos */
-h1 {
-    font-size: 20px;
-    background-color: var(--cor4);
-    color: var(--cor7);
-    text-align: center;
-    padding: 10px;
-    margin: 20px;
-    border-radius: 10px;
-}
-.typeMovies-Series {
-    font-size: 1.5em;
-    background-color: var(--cor4);
-    color: var(--cor2);
-    text-align: left;
-    font-weight: bold;
-}
-
-/* Grid de filmes reutilizável */
-.grid-filmes {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    padding: 20px;
-    text-align: center;
-}
-.grid-filmes img {
-    max-width: 100%;
-    width: 180px;
-    height: 250px;
-    border-radius: 5px;
-}
-.grid-filmes div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.bg-cinza { background-color: var(--cor9); border-radius: 5px; margin: 10px;}
-
-/* Botões */
-button {
-    color: var(--cor2);
-    background-color: var(--cor4);
-    font-family: var(--fonte);
-    margin: 5px;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 4px;
-    box-shadow: 2px 0px 2px 2px var(--cor1);
-    transition: transform 0.3s, opacity 0.3s, background-color 0.3s;
-}
-button:hover {
-    background-color: #d40505;
-    opacity: 0.8;
     transform: scale(1.1);
-}
-
-/* Links gerais */
-#link {
-    color: var(--cor2);
-    text-decoration: none;
-}
-#link:hover {
-    color: var(--cor4);
-    text-decoration: underline;
 }
 
 /* Menu mobile */
 #menu_navegacao {
     display: none;
-    background-color: #000000a2;
+    background-color: black;
     box-shadow: 1px 1px 1px 1px #0000005e;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--cor2);
 }
 #menu_links {
     display: none;
@@ -185,7 +123,6 @@ button:hover {
 #menu_links.show {
     display: flex;
 }
-
 @media (max-width: 768px) {
     #menu_links {
         flex-direction: column;
@@ -218,4 +155,86 @@ button:hover {
         background-color: var(--cor4);
         color: var(--cor2);
     }
+}
+/*Form*/
+.formulario-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Caixa do formulário */
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--cor10);
+    padding: 30px 40px;
+    border-radius: 10px;
+    margin: 15px;
+    width: 100%;
+    max-width: 500px; /* limita largura pra não ficar gigante em telas grandes */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+/* Campos de texto, email, telefone */
+.formulario input[type="text"],
+.formulario input[type="email"],
+.formulario input[type="tel"] {
+    font-family: var(--fonte);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    padding: 15px;
+    width: 100%; /* ocupa toda a largura do form */
+    font-size: 1em;
+}
+
+/* Área de texto */
+.formulario textarea {
+    font-family: var(--fonte);
+    border-radius: 5px;
+    border: none;
+    box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+    width: 100%; /* ocupa toda a largura */
+    min-height: 120px; /* altura melhor */
+    padding: 15px;
+    resize: vertical; /* permite o usuário aumentar a altura */
+    font-size: 1em;
+}
+
+/* Botão alinhado */
+.alignButton {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.alignButton > button {
+    background-color: var(--cor4);
+    padding: 15px 30px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    color: var(--cor2);
+    font-family: var(--fonte);
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.alignButton > button:hover {
+    background-color: var(--cor3);
+    transform: scale(1.05);
+}
+
+/* Textos dentro do formulário */
+.texts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

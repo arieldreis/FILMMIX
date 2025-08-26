@@ -3,8 +3,8 @@ function redirecionar(arquivo) {
 }
 function clicar_menu(){
     const menu_navegacao = document.getElementById('menu_links');
-    menu_navegacao.classList.toggle('show');  // troca entre adicionar e remover
     const btn = document.getElementById('menu_navegacao');
+    menu_navegacao.classList.toggle('show');  // troca entre adicionar e remover
     if(btn.style.transform === "rotate(180deg)"){
         btn.style.transform = "rotate(0deg)";
     }else{
